@@ -21,27 +21,10 @@ export function ReservationForm() {
     e.preventDefault();
     setStatus('submitting');
     
-    try {
-      const response = await fetch('http://localhost:8000/api/reservations', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          guests: parseInt(formData.guests, 10)
-        }),
-      });
-      
-      if (response.ok) {
-        setStatus('success');
-      } else {
-        setStatus('idle');
-        alert('Failed to submit reservation');
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus('idle');
-      alert('Error connecting to server. Make sure FastAPI backend is running.');
-    }
+    // Simulate network request without a backend
+    setTimeout(() => {
+      setStatus('success');
+    }, 1000);
   };
 
   if (status === 'success') {
