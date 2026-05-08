@@ -4,6 +4,8 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Button } from './components/ui/button';
 import { ReservationForm } from './components/ReservationForm';
 import { MapPin, Phone, Utensils, Leaf, Star, MessageCircle, Users, Flame, Heart, ArrowRight, ChevronRight } from 'lucide-react';
+import heroImage from './assets/hero_garden.png';
+import muttonAfghaniImage from './assets/mutton_afghani.png';
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -60,7 +62,7 @@ export default function App() {
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-forest">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2000&q=80" 
+              src={heroImage} 
               alt="Zaytoon Garden Ambiance" 
               className="w-full h-full object-cover filter brightness-[0.35]"
             />
@@ -174,8 +176,8 @@ export default function App() {
             
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={STAGGER} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { title: "Mutton Afghani", desc: "Tender mutton slow-cooked with mild spices and rich tomato base.", img: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80", spice: 1 },
-                { title: "Kabli Pulao", desc: "Aromatic rice topped with sweet carrots, raisins, and tender meat.", img: "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?auto=format&fit=crop&w=600&q=80", spice: 0 },
+                { title: "Mutton Afghani", desc: "Tender mutton slow-cooked with mild spices and rich tomato base.", img: muttonAfghaniImage, spice: 1 },
+                { title: "Kabli Pulao", desc: "Aromatic rice topped with sweet carrots, raisins, and tender meat.", img: "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&q=80", spice: 0 },
                 { title: "Reshmi Kabab", desc: "Silky smooth minced chicken marinated in cream and delicate spices.", img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80", spice: 1 },
                 { title: "Whole Sajji", desc: "Traditional slow-roasted whole chicken, infused with rustic flavors.", img: "https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=600&q=80", spice: 2 },
               ].map((dish, i) => (
@@ -327,9 +329,9 @@ export default function App() {
         <section className="py-2 bg-white">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             <div className="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=600&q=80" alt="Gallery" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" /></div>
-            <div className="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80" alt="Gallery" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" /></div>
-            <div className="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80" alt="Gallery" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" /></div>
-            <div className="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Gallery" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" /></div>
+            <div className="h-64 overflow-hidden"><img src={muttonAfghaniImage} alt="Gallery" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" /></div>
+            <div className="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=600&q=80" alt="Gallery" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" /></div>
+            <div className="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1585553616435-2dc0a54e271d?auto=format&fit=crop&w=600&q=80" alt="Gallery" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" /></div>
           </div>
         </section>
 
